@@ -1,0 +1,212 @@
+.navbar {
+  padding: 10px 50px;
+  background: #000;
+}
+.navbar .navbarUl .dropdown {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  position: static;
+}
+.navbar .navbarUl .dropdown .nav_link {
+  margin-right: 40px;
+  height: auto;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  overflow: hidden;
+}
+.navbar .navbarUl .dropdown .nav_link .span_a {
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  text-shadow: 0 20px 0 #f68e8e;
+  transition: transform 0.4s ease;
+}
+.navbar .navbarUl .dropdown .nav_link .a1 {
+  transition-delay: 0.05s;
+}
+.navbar .navbarUl .dropdown .nav_link .a2 {
+  transition-delay: 0.1s;
+}
+.navbar .navbarUl .dropdown .nav_link .a3 {
+  transition-delay: 0.15s;
+}
+.navbar .navbarUl .dropdown .nav_link .a4 {
+  transition-delay: 0.2s;
+}
+.navbar .navbarUl .dropdown .nav_link .a5 {
+  transition-delay: 0.25s;
+}
+.navbar .navbarUl .dropdown .nav_link .a6 {
+  transition-delay: 0.3s;
+}
+.navbar .navbarUl .dropdown .nav_link .a7 {
+  transition-delay: 0.35s;
+}
+.navbar .navbarUl .dropdown .nav_link .a8 {
+  transition-delay: 0.4s;
+}
+.navbar .navbarUl .dropdown .nav_link .a9 {
+  transition-delay: 0.45s;
+}
+.navbar .navbarUl .dropdown .nav_link .a10 {
+  transition-delay: 0.6s;
+}
+.navbar .navbarUl .dropdown .nav_link .a11 {
+  transition-delay: 0.65s;
+}
+.navbar .navbarUl .dropdown .nav_link .a12 {
+  transition-delay: 0.7s;
+}
+.navbar .navbarUl .dropdown .nav_link:hover .span_a {
+  transform: translateY(-75%);
+}
+.navbar .navbarUl .dropdown .nav_link i {
+  color: #fff;
+  margin-left: 6px;
+  transition: all linear 0.3s;
+}
+.navbar .navbarUl .dropdown:hover .dropdown-dv {
+  opacity: 1;
+  visibility: visible;
+}
+.navbar .navbarUl .dropdown:hover .nav_link .span_a {
+  transform: translateY(-75%);
+}
+.navbar .navbarUl .dropdown:hover .nav_link i {
+  transform: translateY(7px);
+  color: #f68e8e;
+}
+.navbar .navbarUl .dropdown .dropdown-dv {
+  width: 80%;
+  padding: 50px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-evenly;
+  opacity: 0;
+  visibility: hidden;
+}
+.navbar .navbarUl .dropdown .dropdown-dv ul {
+  width: 25%;
+}
+.navbar .navbarUl .dropdown .dropdown-dv ul h5 {
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 600;
+  color: #121212;
+  padding-bottom: 20px;
+}
+.navbar .navbarUl .dropdown .dropdown-dv ul li {
+  display: block;
+}
+.navbar .navbarUl .dropdown .dropdown-dv ul li .dropdown-a {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  padding-bottom: 20px;
+  letter-spacing: 0.02rem;
+  display: inline-block;
+  margin-bottom: 0;
+  text-transform: capitalize;
+  transition: all linear 0.3s;
+}
+.navbar .navbarUl .dropdown .dropdown-dv ul li .dropdown-a:hover {
+  letter-spacing: 1.5px;
+}
+.navbar .navbarUl .dropdown .d_menu {
+  width: 20%;
+  display: block;
+  padding-left: 0;
+  background: #000;
+  transform: translateX(-57%);
+}
+.navbar .navbarUl .dropdown .d_menu ul {
+  width: 100%;
+}
+.navbar .navbarUl .dropdown .d_menu ul li .dropdown-a {
+  color: #fff;
+}
+.navbar .navbarUl .dropdown .dp2 {
+  width: 100%;
+}
+.navbar .navbtn {
+  display: inline-block;
+}
+.navbar .navbtn a .cmnBtn {
+  padding: 15px 25px;
+  border-radius: 30px;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #f68e8e;
+  transition: all linear 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+.navbar .navbtn a .cmnBtn::after {
+  display: block;
+  width: 0%;
+  height: 0%;
+  background: #f68e8e;
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all linear 0.3s;
+  z-index: -1;
+}
+.navbar .navbtn a .cmnBtn:hover {
+  background: transparent;
+  color: #fff;
+  z-index: 1;
+}
+.navbar .navbtn a .cmnBtn:hover::after {
+  width: 100%;
+  height: 100%;
+  background: #f68e8e;
+}
+
+#banner {
+  background: url(../images/hero-bg.jpg) no-repeat center/cover;
+  padding: 400px 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: sans-serif;
+}
+
+li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Kanit", sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+html, body {
+  overflow-x: hidden;
+}/*# sourceMappingURL=style.css.map */

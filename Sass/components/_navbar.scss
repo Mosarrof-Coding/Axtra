@@ -1,0 +1,188 @@
+@import "../variable/variable";
+.navbar{
+    padding: 10px 50px;
+    background: $dark000;
+    .navbarUl{
+        .dropdown{
+            height: 100px;
+            display: flex;
+            align-items: center;
+            position: static;
+            .nav_link{
+                margin-right: 40px;
+                height: auto;
+                cursor: pointer;
+                display: inline-flex;
+                align-items: center;
+                height: 24px;
+                overflow: hidden;
+                .span_a{
+                    text-transform: capitalize;
+                    font-size: 18px;
+                    font-weight: 500;
+                    color:$white;
+                    text-shadow: 0 20px 0 $pink;
+                    transition: transform 0.4s ease;
+                }
+                .a1{
+                    transition-delay: .05s;
+                }
+                .a2{
+                    transition-delay: .1s;
+                }
+                .a3{
+                    transition-delay: .15s;
+                }
+                .a4{
+                    transition-delay: .2s;
+                }
+                .a5{
+                    transition-delay: .25s;
+                }
+                .a6{
+                    transition-delay: .3s;
+                }
+                .a7{
+                    transition-delay: .35s;
+                }
+                .a8{
+                    transition-delay: .4s;
+                }
+                .a9{
+                    transition-delay: .45s;
+                }
+                .a10{
+                    transition-delay: .6s;
+                }
+                .a11{
+                    transition-delay: .65s;
+                }
+                .a12{
+                    transition-delay: .7s;
+                }
+                &:hover .span_a{
+                    transform: translateY(-75%);
+                }
+                i{
+                    color:$white;
+                    margin-left: 6px;
+                    transition: all linear .3s;
+                }
+            }
+            &:hover{
+                .dropdown-dv{
+                    opacity: 1;
+                    visibility: visible;
+                }
+                .nav_link{
+                    .span_a{
+                        transform: translateY(-75%);
+                        
+                    }
+                    i{
+                        transform: translateY(7px);
+                        color:$pink;
+                    }
+                }
+            }
+            .dropdown-dv{
+                width: 80%;
+                padding: 50px;
+                background: $white;
+                position: absolute;
+                left: 50%;
+                top: 90%;
+                transform: translateX(-50%);
+                display: flex;
+                justify-content: space-evenly;
+                opacity: 0;
+                visibility: hidden;
+                ul{
+                    width: 25%;
+                    h5{
+                        text-transform: capitalize;
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: #121212;
+                        padding-bottom: 20px;
+                    }
+                    li{
+                        display: block;
+                        .dropdown-a{
+                            font-weight: 400;
+                            font-size: 16px;
+                            color:$dark000;
+                            padding-bottom: 20px;
+                            letter-spacing: .02rem;
+                            display: inline-block;
+                            margin-bottom: 0;
+                            text-transform: capitalize;
+                            transition: all linear .3s;
+                            &:hover{
+                                letter-spacing: 1.5px;
+                            }
+                        }
+                    }
+                }
+            }
+            .d_menu{
+                width: 20%;
+                display: block;
+                padding-left: 0;
+                background: $dark000;
+                transform: translateX(-57%);
+                ul{
+                    width: 100%;
+                    li{
+                        .dropdown-a{
+                            color:$white;
+                        }
+                    }
+                }
+            }
+            .dp2{
+                width: 100%;
+            }
+        }
+    }
+    .navbtn{
+        display: inline-block;
+        a{
+            .cmnBtn{
+                padding: 15px 25px;
+                border-radius: 30px;
+                display: inline-block;
+                font-size: 18px;
+                font-weight: 500;
+                text-transform: uppercase;
+                color:$pink;
+                transition: all linear .3s;
+                overflow: hidden;
+                position: relative;
+                &::after{
+                    display: block;
+                    width: 0%;
+                    height: 0%;
+                    background: $pink;
+                    position: absolute;
+                    content: "";
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: all linear .3s;
+                    z-index: -1;
+                }
+                &:hover{
+                    background: transparent;
+                    color:$white;
+                    z-index: 1;
+                    &::after{
+                        width: 100%;
+                        height: 100%;
+                        background: $pink;
+                    }
+                }
+            }
+        }
+    }
+}
