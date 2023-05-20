@@ -1,0 +1,109 @@
+@import "../variable/variable";
+@mixin CcmnBtn{
+    .cmnBtn{
+        padding: 10px 25px;
+        min-width: 130px;
+        border-radius: 58px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        color:$pink;
+        transition: all linear .3s;
+        overflow: hidden;
+        position: relative;
+        &::after{
+            display: block;
+            width: 0%;
+            height: 0%;
+            border-radius: 58px;
+            background: $pink;
+            position: absolute;
+            content: "";
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: all linear .3s;
+            z-index: -1;
+        }
+        &:hover{
+            background: transparent;
+            color:$white;
+            z-index: 1;
+            &::after{
+                width: 100%;
+                height: 100%;
+                background: $pink;
+            }
+        }
+    }
+}
+@mixin Cmnbtn2{
+    display: inline-block;
+    padding: 15px 30px;
+    min-width: 130px;
+    border: 1px solid $pink;
+    border-radius: 58px;
+    font-weight: 500;
+    font-size: 16px;
+    color:$pink;
+    line-height: 1.2;
+    transition: all linear .3s;
+    text-transform: uppercase;
+    overflow: hidden;
+    position: relative;
+    &::after{
+        display: block;
+        width: 0%;
+        height: 0%;
+        border-radius: 58px;
+        background: $pink;
+        position: absolute;
+        content: "";
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: all linear .3s;
+        z-index: -1;
+    }
+    &:hover{
+        background: transparent;
+        color:$white;
+        z-index: 1;
+        &::after{
+            width: 100%;
+            height: 100%;
+            background: $pink;
+        }
+    }
+}
+@mixin h5{
+    font-size: 18px;
+    height: auto;
+    color: #999;
+    font-weight: 500;
+    line-height: 1.2;
+    position: relative;
+    padding-left: 80px;
+    margin-bottom: 18px;
+    display: inline-block;
+    text-transform: capitalize;
+    font-family: 'euclid_Circular_B';
+    &::after{
+        display: inline-block;
+        position: absolute;
+        content: "";
+        left: -15%;
+        top: 50%;
+        width: 100px;
+        height: 1px;
+        background: $p_999;
+    }
+}
+@mixin h2{
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 1.1;
+    color: $white;
+    padding-bottom: 20px;
+}

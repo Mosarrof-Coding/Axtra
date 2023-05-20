@@ -1,4 +1,188 @@
+@import "../variable/variable";
+/*banner part*/
 #banner{
     background: url(../images/hero-bg.jpg) no-repeat center/cover;
-    padding: 400px 0;
+    padding: 200px 0 50px 0;
+    .bannerHeading{
+        width: 950px;
+        margin: 0 auto;
+        text-align: center;
+        h1{
+            color: $white;
+            font-weight: 500;
+            font-size: 70px;
+            line-height: 1;
+            padding-bottom: 20px;
+            .animationview{
+                display: inline-block;
+                height: 70px;
+                margin-bottom: -18px;
+                overflow-y: hidden;
+                .website_ul{
+                    display: block;
+                    height: auto;
+                    text-align: left;
+                    padding-left: 0;
+                    margin-top: -12px;
+                    animation: don 40s cubic-bezier(0.02, 1, 0.02, 1) infinite;
+                    background-repeat: repeat-y;
+                    .website_items{
+                        display: block;
+                        margin-top: 4px;
+                        color:$pink;
+                    }
+                    @keyframes don {
+                        0%{
+                            transform: translateY(0%);
+                        }
+                        5%{
+                            transform: translateY(-5%);
+                        }
+                        10%{
+                            transform: translateY(-10%);
+                        }
+                        15%{
+                            transform: translateY(-15%);
+                        }
+                        20%{
+                            transform: translateY(-20%);
+                        }
+                        25%{
+                            transform: translateY(-25%);
+                        }
+                        30%{
+                            transform: translateY(-30%);
+                        }
+                        35%{
+                            transform: translateY(-35%);
+                        }
+                        40%{
+                            transform: translateY(-40%);
+                        }
+                        45%{
+                            transform: translateY(-45%);
+                        }
+                        50%{
+                            transform: translateY(-50%);
+                        }
+                        55%{
+                            transform: translateY(-55%);
+                        }
+                        60%{
+                            transform: translateY(-60%);
+                        }
+                        65%{
+                            transform: translateY(-65%);
+                        }
+                        70%{
+                            transform: translateY(-70%);
+                        }
+                        75%{
+                            transform: translateY(-75%);
+                        }
+                        80%{
+                            transform: translateY(-80%);
+                        }
+                        85%{
+                            transform: translateY(-85%);
+                        }
+                        90%{
+                            transform: translateY(-90%);
+                        }
+                        95%{
+                            transform: translateY(-95%);
+                        }
+                        100%{
+                            transform: translateY(-100%);
+                        }
+                    }
+                }
+            }
+        }
+        h4{
+            color: #fff;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 1.2;
+            .pink{
+                color:$pink;
+            }
+            .rtl{
+                display: inline-block;
+                padding: 3px 15px;
+                background: $pink;
+                border-radius: 0 20px 0 20px;
+                color:$dark000;
+                margin: 0;
+            }
+        }
+        p{
+            font-weight: 400;
+            font-size: 18px;
+            color:$p_999;
+        }
+    }
+    .banIMG{
+        display: flex;
+        gap:3%;
+        align-items: flex-end;
+        position: relative;
+        padding-top: 100px;
+        .bigImg{
+            width: 85%;
+            padding-left: 10%;
+            position: relative;
+            img{
+                width: 100%;
+            }
+            .absolute_Img{
+                position: absolute;
+                left: 10%;
+                bottom: 0;
+            }
+        }
+        .mobImg{
+            width: 15%;
+            img{
+                width: 100%;
+            }
+        }
+        .envatoImg{
+            position: absolute;
+            right: 1%;
+            top: 15%;
+            width: 12%;
+            animation: xpand 2s linear alternate infinite;
+            img{
+                width: 100%;
+            }
+        }
+        .arrow{
+            left: 0;
+            top: 17%;
+            position: absolute;
+            width: 10%;
+            animation: xpand 2s linear alternate-reverse infinite;
+            img{
+                width: 100%;
+            }
+            animation: shew 2s alternate infinite;
+        }
+        @keyframes shew {
+            0%{
+                transform: translateY(0px);
+            }
+            0%{
+                transform: translateY(35px);
+            }
+        }
+        @keyframes xpand {
+            0%{
+                transform: scale(100%);
+            }
+            100%{
+                transform: scale(110%);
+            }
+        }
+    }
 }

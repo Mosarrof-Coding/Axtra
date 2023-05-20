@@ -1,7 +1,14 @@
 @import "../variable/variable";
+@import "../mixins/mixin";
+/*navbar part*/
 .navbar{
-    padding: 10px 50px;
+    padding: 0px 50px;
     background: $dark000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
     .navbarUl{
         .dropdown{
             height: 100px;
@@ -9,7 +16,7 @@
             align-items: center;
             position: static;
             .nav_link{
-                margin-right: 40px;
+                margin: 0 20px;
                 height: auto;
                 cursor: pointer;
                 display: inline-flex;
@@ -86,7 +93,7 @@
                 }
             }
             .dropdown-dv{
-                width: 80%;
+                width: 90%;
                 padding: 50px;
                 background: $white;
                 position: absolute;
@@ -125,12 +132,20 @@
                     }
                 }
             }
+            .dp2{
+                width: 100%;
+            }
+        }
+        .drop2{
+            position: relative;
             .d_menu{
-                width: 20%;
+                position: absolute;
+                left: 70%;
+                top: 90%;
+                width: 150%;
                 display: block;
                 padding-left: 0;
                 background: $dark000;
-                transform: translateX(-57%);
                 ul{
                     width: 100%;
                     li{
@@ -140,49 +155,12 @@
                     }
                 }
             }
-            .dp2{
-                width: 100%;
-            }
         }
     }
     .navbtn{
         display: inline-block;
         a{
-            .cmnBtn{
-                padding: 15px 25px;
-                border-radius: 30px;
-                display: inline-block;
-                font-size: 18px;
-                font-weight: 500;
-                text-transform: uppercase;
-                color:$pink;
-                transition: all linear .3s;
-                overflow: hidden;
-                position: relative;
-                &::after{
-                    display: block;
-                    width: 0%;
-                    height: 0%;
-                    background: $pink;
-                    position: absolute;
-                    content: "";
-                    left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
-                    transition: all linear .3s;
-                    z-index: -1;
-                }
-                &:hover{
-                    background: transparent;
-                    color:$white;
-                    z-index: 1;
-                    &::after{
-                        width: 100%;
-                        height: 100%;
-                        background: $pink;
-                    }
-                }
-            }
+            @include CcmnBtn;
         }
     }
 }
