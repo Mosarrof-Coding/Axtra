@@ -1,81 +1,93 @@
 @import "../variable/variable";
 @import "../mixins/mixin";
 #demos{
-    padding: 50px 0;
-    background: $sec212529;
-    .demoHeading{
+    .allDemo{
+        background: $sec212529;
+        display: block;
+        padding-top: 120px;
         text-align: center;
-        h5{
-            @include h5;
+        .demoHeading{
+            text-align: center;
+            h5{
+                @include h5;
+            }
+            h2{
+                @include h2;
+            }
+            p{
+                color: #e1e1e1;
+                max-width: 780px;
+                margin: 10px auto;
+                font-size: 20px;
+                line-height: 1.5;
+                font-weight: 400;
+            }
         }
-        h2{
-            @include h2;
-        }
-    }
-    .demo{
-        margin-top: 50px;
-        .demoImg{
-            position: relative;
-            margin-top: 24px;
-            .imgtitle{
-                padding: 20px;
-                background: #222222;
-                h3{
-                    a{
-                        font-size: 24px;
-                        color: #fff;
-                        font-weight: 400;
-                        padding-top: 20px;
-                    }
-                    transition: all 0.5s;
-                    position: relative;
-                    display: inline-block;
-                    text-transform: capitalize;
-                    transition: all 0.5s;
-                    &::after{
-                        display: block;
-                        position: absolute;
-                        content: "";
-                        left: 0;
-                        top: 100%;
-                        width: 0%;
-                        height: 1px;
-                        background: $pink;
-                        transition: all linear .3s;
-                    }
-                    &:hover{
+        .demo{
+            .demoImg{
+                position: relative;
+                margin-top: 24px;
+                .imgtitle{
+                    padding: 20px;
+                    background: #222222;
+                    h3{
+                        a{
+                            font-size: 24px;
+                            color: #fff;
+                            font-weight: 400;
+                            padding-top: 20px;
+                        }
+                        transition: all 0.5s;
+                        position: relative;
+                        display: inline-block;
+                        text-transform: capitalize;
+                        transition: all 0.5s;
                         &::after{
-                            width: 100%;
+                            display: block;
+                            position: absolute;
+                            content: "";
+                            left: 0;
+                            top: 100%;
+                            width: 0%;
+                            height: 1px;
+                            background: $pink;
+                            transition: all linear .3s;
+                        }
+                        &:hover{
+                            &::after{
+                                width: 100%;
+                            }
                         }
                     }
+                    h6{
+                        font-size: 16px;
+                        color: $white;
+                        font-weight: 400;
+                        text-transform: capitalize;
+                    }
                 }
-                h6{
-                    font-size: 16px;
-                    color: $white;
+                .typeLayer{
+                    position: absolute;
+                    right: 5%;
+                    top: 3%;
+                    display: block;
+                    text-align: center;
+                    font-size: 14px;
                     font-weight: 400;
-                    text-transform: capitalize;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    background: $pink;
+                    border-radius: 20px;
+                    padding: 2px 20px;
                 }
             }
-            .typeLayer{
-                position: absolute;
-                right: 5%;
-                top: 3%;
-                display: block;
+            .demoBtn{
+                margin-top: 40px;
+                padding-bottom: 20px;
                 text-align: center;
-                font-size: 14px;
-                font-weight: 400;
-                letter-spacing: 1px;
-                text-transform: uppercase;
-                background: $pink;
-                border-radius: 20px;
-                padding: 2px 20px;
-            }
-        }
-        .demoBtn{
-            margin-top: 40px;
-            text-align: center;
-            a{
-                @include Cmnbtn2;
+                a{
+                    @include Cmnbtn2;
+                }
             }
         }
     }

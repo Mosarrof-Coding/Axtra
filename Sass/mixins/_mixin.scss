@@ -12,6 +12,7 @@
         transition: all linear .3s;
         overflow: hidden;
         position: relative;
+        mix-blend-mode: exclusion;
         &::after{
             display: block;
             width: 0%;
@@ -84,7 +85,7 @@
     font-weight: 500;
     line-height: 1.2;
     position: relative;
-    padding-left: 80px;
+    padding-left: 55px;
     margin-bottom: 18px;
     display: inline-block;
     text-transform: capitalize;
@@ -93,9 +94,9 @@
         display: inline-block;
         position: absolute;
         content: "";
-        left: -15%;
+        left: 0%;
         top: 50%;
-        width: 100px;
+        width: 50px;
         height: 1px;
         background: $p_999;
     }
@@ -106,4 +107,9 @@
     line-height: 1.1;
     color: $white;
     padding-bottom: 20px;
+}
+@mixin p{
+    font-weight: 400;
+    font-size: 18px;
+    color:$p_999;
 }

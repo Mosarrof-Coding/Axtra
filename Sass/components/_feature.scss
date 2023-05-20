@@ -1,0 +1,58 @@
+@import "../variable/variable";
+@import "../mixins/mixin";
+#feature{
+    padding: 130px 0;
+    .feature_heading{
+        position: relative;
+        padding-bottom: 30px;
+        h5{
+            @include h5;
+        }
+        h2{
+            @include h2;
+            color:$dark000;
+        }
+        p{
+            @include p;
+        }
+        .techArro{
+            width: 40%;
+            position: absolute;
+            right: 5%;
+            top: 100%;
+            animation: toright 3s alternate-reverse infinite;
+        }
+        @keyframes toright {
+            0%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(20%);
+            }
+        }
+    }
+    .widget{
+        width: 100%;
+        margin-bottom: 24px;
+        padding: 20px 0;
+        background: $white;
+        transition: all linear .3s;
+        border-radius: 10px;
+        cursor: pointer;
+        img{
+            width: 30%;
+            display:block;
+            margin: 0 auto;
+        }
+        .widgetTxt{
+            text-transform: capitalize;
+            color:$dark000;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 20px;
+        }
+        &:hover{
+            box-shadow: 0 0 10px 10px #ebebeb;
+        }
+    }
+}

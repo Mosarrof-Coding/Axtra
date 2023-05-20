@@ -162,6 +162,7 @@
   transition: all linear 0.3s;
   overflow: hidden;
   position: relative;
+  mix-blend-mode: exclusion;
 }
 .navbar .navbtn a .cmnBtn::after {
   display: block;
@@ -191,7 +192,7 @@
 /*banner part*/
 #banner {
   background: url(../images/hero-bg.jpg) no-repeat center/cover;
-  padding: 200px 0 50px 0;
+  padding-top: 200px;
 }
 #banner .bannerHeading {
   width: 950px;
@@ -376,68 +377,75 @@
   }
 }
 
-#demos {
-  padding: 50px 0;
+#demos .allDemo {
   background: #212529;
-}
-#demos .demoHeading {
+  display: block;
+  padding-top: 120px;
   text-align: center;
 }
-#demos .demoHeading h5 {
+#demos .allDemo .demoHeading {
+  text-align: center;
+}
+#demos .allDemo .demoHeading h5 {
   font-size: 18px;
   height: auto;
   color: #999;
   font-weight: 500;
   line-height: 1.2;
   position: relative;
-  padding-left: 80px;
+  padding-left: 55px;
   margin-bottom: 18px;
   display: inline-block;
   text-transform: capitalize;
   font-family: "euclid_Circular_B";
 }
-#demos .demoHeading h5::after {
+#demos .allDemo .demoHeading h5::after {
   display: inline-block;
   position: absolute;
   content: "";
-  left: -15%;
+  left: 0%;
   top: 50%;
-  width: 100px;
+  width: 50px;
   height: 1px;
   background: #999999;
 }
-#demos .demoHeading h2 {
+#demos .allDemo .demoHeading h2 {
   font-weight: 500;
   font-size: 60px;
   line-height: 1.1;
   color: #fff;
   padding-bottom: 20px;
 }
-#demos .demo {
-  margin-top: 50px;
+#demos .allDemo .demoHeading p {
+  color: #e1e1e1;
+  max-width: 780px;
+  margin: 10px auto;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 400;
 }
-#demos .demo .demoImg {
+#demos .allDemo .demo .demoImg {
   position: relative;
   margin-top: 24px;
 }
-#demos .demo .demoImg .imgtitle {
+#demos .allDemo .demo .demoImg .imgtitle {
   padding: 20px;
   background: #222222;
 }
-#demos .demo .demoImg .imgtitle h3 {
+#demos .allDemo .demo .demoImg .imgtitle h3 {
   transition: all 0.5s;
   position: relative;
   display: inline-block;
   text-transform: capitalize;
   transition: all 0.5s;
 }
-#demos .demo .demoImg .imgtitle h3 a {
+#demos .allDemo .demo .demoImg .imgtitle h3 a {
   font-size: 24px;
   color: #fff;
   font-weight: 400;
   padding-top: 20px;
 }
-#demos .demo .demoImg .imgtitle h3::after {
+#demos .allDemo .demo .demoImg .imgtitle h3::after {
   display: block;
   position: absolute;
   content: "";
@@ -448,16 +456,16 @@
   background: #FF9776;
   transition: all linear 0.3s;
 }
-#demos .demo .demoImg .imgtitle h3:hover::after {
+#demos .allDemo .demo .demoImg .imgtitle h3:hover::after {
   width: 100%;
 }
-#demos .demo .demoImg .imgtitle h6 {
+#demos .allDemo .demo .demoImg .imgtitle h6 {
   font-size: 16px;
   color: #fff;
   font-weight: 400;
   text-transform: capitalize;
 }
-#demos .demo .demoImg .typeLayer {
+#demos .allDemo .demo .demoImg .typeLayer {
   position: absolute;
   right: 5%;
   top: 3%;
@@ -471,11 +479,12 @@
   border-radius: 20px;
   padding: 2px 20px;
 }
-#demos .demo .demoBtn {
+#demos .allDemo .demo .demoBtn {
   margin-top: 40px;
+  padding-bottom: 20px;
   text-align: center;
 }
-#demos .demo .demoBtn a {
+#demos .allDemo .demo .demoBtn a {
   display: inline-block;
   padding: 15px 30px;
   min-width: 130px;
@@ -490,7 +499,7 @@
   overflow: hidden;
   position: relative;
 }
-#demos .demo .demoBtn a::after {
+#demos .allDemo .demo .demoBtn a::after {
   display: block;
   width: 0%;
   height: 0%;
@@ -504,12 +513,286 @@
   transition: all linear 0.3s;
   z-index: -1;
 }
-#demos .demo .demoBtn a:hover {
+#demos .allDemo .demo .demoBtn a:hover {
   background: transparent;
   color: #fff;
   z-index: 1;
 }
-#demos .demo .demoBtn a:hover::after {
+#demos .allDemo .demo .demoBtn a:hover::after {
+  width: 100%;
+  height: 100%;
+  background: #FF9776;
+}
+
+#Service {
+  background: #1B1B1B;
+  padding-top: 100px;
+}
+#Service .colLeft {
+  border-right: 1px solid rgba(62, 62, 62, 0.4666666667);
+  border-left: 1px solid rgba(62, 62, 62, 0.4666666667);
+}
+#Service .colLeft .serviceHeading {
+  padding: 120px 0;
+}
+#Service .colLeft .serviceHeading h5 {
+  font-size: 18px;
+  height: auto;
+  color: #999;
+  font-weight: 500;
+  line-height: 1.2;
+  position: relative;
+  padding-left: 55px;
+  margin-bottom: 18px;
+  display: inline-block;
+  text-transform: capitalize;
+  font-family: "euclid_Circular_B";
+  width: 70%;
+}
+#Service .colLeft .serviceHeading h5::after {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  left: 0%;
+  top: 50%;
+  width: 50px;
+  height: 1px;
+  background: #999999;
+}
+#Service .colLeft .serviceHeading h2 {
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 1.1;
+  color: #fff;
+  padding-bottom: 20px;
+  width: 70%;
+}
+#Service .colLeft .serviceHeading p {
+  font-weight: 400;
+  font-size: 18px;
+  color: #999999;
+  width: 70%;
+}
+#Service .colLeft .Big50 {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 200px;
+  font-weight: 600;
+}
+#Service .colLeft .Big50 i {
+  font-size: 150px;
+  margin-left: 5px;
+}
+#Service .colRight {
+  border-right: 1px solid rgba(62, 62, 62, 0.4666666667);
+}
+#Service .colRight .serviceImg {
+  padding: 80px 0;
+  display: block;
+  position: relative;
+  text-align: right;
+}
+#Service .colRight .serviceImg .layout_1 {
+  width: 70%;
+  margin-bottom: 20px;
+}
+#Service .colRight .serviceImg .layout_2 {
+  width: 50%;
+}
+#Service .colRight .serviceImg .layout_3 {
+  display: block;
+  width: 35%;
+  position: absolute;
+  left: 5%;
+  top: 26%;
+  z-index: 4;
+}
+#Service .colRight .serviceImg .layout_4 {
+  display: block;
+  width: 30%;
+  position: absolute;
+  right: 10%;
+  top: 47%;
+}
+#Service .colRight .serviceImg .layout_5 {
+  display: block;
+  width: 25%;
+  position: absolute;
+  left: 23%;
+  top: 65%;
+}
+#Service .colRight .essential_elements {
+  text-align: right;
+}
+#Service .colRight .essential_elements h2 {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 1.1;
+  color: #fff;
+  padding-bottom: 20px;
+  width: 60%;
+}
+#Service .colRight .essential_elements p {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 18px;
+  color: #999999;
+  width: 60%;
+}
+
+#feature {
+  padding: 130px 0;
+}
+#feature .feature_heading {
+  position: relative;
+  padding-bottom: 30px;
+}
+#feature .feature_heading h5 {
+  font-size: 18px;
+  height: auto;
+  color: #999;
+  font-weight: 500;
+  line-height: 1.2;
+  position: relative;
+  padding-left: 55px;
+  margin-bottom: 18px;
+  display: inline-block;
+  text-transform: capitalize;
+  font-family: "euclid_Circular_B";
+}
+#feature .feature_heading h5::after {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  left: 0%;
+  top: 50%;
+  width: 50px;
+  height: 1px;
+  background: #999999;
+}
+#feature .feature_heading h2 {
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 1.1;
+  color: #fff;
+  padding-bottom: 20px;
+  color: #000;
+}
+#feature .feature_heading p {
+  font-weight: 400;
+  font-size: 18px;
+  color: #999999;
+}
+#feature .feature_heading .techArro {
+  width: 40%;
+  position: absolute;
+  right: 5%;
+  top: 100%;
+  animation: toright 3s alternate-reverse infinite;
+}
+@keyframes toright {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(20%);
+  }
+}
+#feature .widget {
+  width: 100%;
+  margin-bottom: 24px;
+  padding: 20px 0;
+  background: #fff;
+  transition: all linear 0.3s;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#feature .widget img {
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+}
+#feature .widget .widgetTxt {
+  text-transform: capitalize;
+  color: #000;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 20px;
+}
+#feature .widget:hover {
+  box-shadow: 0 0 10px 10px #ebebeb;
+}
+
+#hurry {
+  background: #000;
+  padding: 120px 0;
+}
+#hurry .hurryTitle {
+  text-align: center;
+}
+#hurry .hurryTitle .hurrytext {
+  text-transform: capitalize;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1;
+  display: block;
+}
+#hurry .hurryTitle .addtext {
+  font-size: 130px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 0.95;
+  padding-bottom: 35px;
+  max-width: 1040px;
+  margin: 0 auto;
+  display: block;
+}
+#hurry .hurryTitle p {
+  font-weight: 400;
+  font-size: 18px;
+  color: #999999;
+}
+#hurry .hurryTitle .hurrybtn {
+  margin: 20px 0;
+}
+#hurry .hurryTitle .hurrybtn a {
+  display: inline-block;
+  padding: 15px 30px;
+  min-width: 130px;
+  border: 1px solid #FF9776;
+  border-radius: 58px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FF9776;
+  line-height: 1.2;
+  transition: all linear 0.3s;
+  text-transform: uppercase;
+  overflow: hidden;
+  position: relative;
+}
+#hurry .hurryTitle .hurrybtn a::after {
+  display: block;
+  width: 0%;
+  height: 0%;
+  border-radius: 58px;
+  background: #FF9776;
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all linear 0.3s;
+  z-index: -1;
+}
+#hurry .hurryTitle .hurrybtn a:hover {
+  background: transparent;
+  color: #fff;
+  z-index: 1;
+}
+#hurry .hurryTitle .hurrybtn a:hover::after {
   width: 100%;
   height: 100%;
   background: #FF9776;
