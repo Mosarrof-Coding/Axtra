@@ -116,10 +116,9 @@
   font-weight: 400;
   font-size: 16px;
   color: #000;
-  padding-bottom: 20px;
   letter-spacing: 0.02rem;
   display: inline-block;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   text-transform: capitalize;
   transition: all linear 0.3s;
 }
@@ -330,7 +329,7 @@
 }
 #banner .banIMG .bigImg .absolute_Img {
   position: absolute;
-  left: 10%;
+  left: 0;
   bottom: 0;
 }
 #banner .banIMG .mobImg {
@@ -796,6 +795,135 @@
   width: 100%;
   height: 100%;
   background: #FF9776;
+}
+
+#shope {
+  padding-top: 150px;
+}
+#shope .shop_category .soptitle {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+#shope .shop_category .soptitle .attribute {
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  padding-right: 10px;
+}
+#shope .shop_category .soptitle .sopbtn select {
+  text-transform: capitalize;
+  padding: 5px 15px;
+  border-radius: 20px;
+  background: #999999;
+  color: #fff;
+  cursor: pointer;
+}
+#shope .shop_category .soptitle .sopbtn select option {
+  color: #fff;
+}
+#shope .shop_category .soptitle .sopbtn select::after {
+  display: none;
+}
+#shope .shop_category .soptitle .sopbtn select::before {
+  display: none;
+}
+#shope .shop_category .soptitle .sopbtn select:hover {
+  background: #000;
+}
+#shope .shop_category .soptitle .sopLI {
+  text-transform: capitalize;
+  padding: 5px 15px;
+  border-radius: 20px;
+  background: #999999;
+  color: #fff;
+  margin-left: 20px;
+  cursor: pointer;
+}
+#shope .shop_category .soptitle .sopLI:hover {
+  background: #000;
+}
+#shope .shop_category .soptitle .sopLI.active {
+  background: #000;
+}
+#shope .shop_category input {
+  width: 70%;
+  padding: 7px 20px;
+  border-radius: 20px;
+  border: 1px solid #999999;
+  background: #e7f9ff;
+}
+#shope .shop_gallery {
+  padding: 20px 0;
+}
+#shope .shop_gallery .shop_item {
+  position: relative;
+  overflow: hidden;
+  margin-top: 24px;
+}
+#shope .shop_gallery .shop_item .sopimg {
+  display: flex;
+}
+#shope .shop_gallery .shop_item .sopimg img:nth-child(1) {
+  opacity: 1;
+  visibility: visible;
+  transition: all linear 0.3s;
+  filter: blur(0px);
+}
+#shope .shop_gallery .shop_item .sopimg img:nth-child(2) {
+  opacity: 0;
+  visibility: hidden;
+  transition: all linear 0.3s;
+  margin-right: -100%;
+  transform: scaleX(2);
+  filter: blur(10px);
+}
+#shope .shop_gallery .shop_item .sopimg:hover img:nth-child(1) {
+  opacity: 0;
+  visibility: hidden;
+  margin-left: -100%;
+  transform: scaleX(2);
+  filter: blur(10px);
+}
+#shope .shop_gallery .shop_item .sopimg:hover img:nth-child(2) {
+  opacity: 1;
+  visibility: visible;
+  margin-right: 0%;
+  transform: scaleX(1);
+  filter: blur(0px);
+}
+#shope .shop_gallery .shop_item .spptxt {
+  padding: 10px;
+  background: #fafafa;
+}
+#shope .shop_gallery .shop_item .spptxt h3 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  transition: all 0.3s;
+}
+#shope .shop_gallery .shop_item .spptxt .sopprice .recent_price {
+  margin-right: 30px;
+}
+#shope .shop_gallery .shop_item .spptxt .sopprice .previous_price {
+  color: #999999;
+}
+#shope .shop_gallery .shop_item .dressType_layer {
+  padding: 3px 10px;
+  font-size: 12px;
+  color: #999999;
+  background: rgba(250, 250, 250, 0.7137254902);
+  position: absolute;
+  right: 5%;
+  top: 3%;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+}
+#shope .shop_gallery .shop_item .dressType_layer h6 {
+  margin-bottom: 0;
+  text-transform: capitalize;
+  font-weight: 400;
 }
 
 * {
