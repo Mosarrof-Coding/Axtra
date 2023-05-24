@@ -862,35 +862,82 @@
   margin-top: 24px;
 }
 #shope .shop_gallery .shop_item .sopimg {
+  position: relative;
+  overflow: hidden;
+}
+#shope .shop_gallery .shop_item .sopimg a {
   display: flex;
 }
-#shope .shop_gallery .shop_item .sopimg img:nth-child(1) {
+#shope .shop_gallery .shop_item .sopimg a img:nth-child(1) {
   opacity: 1;
   visibility: visible;
   transition: all linear 0.3s;
+  background-size: cover;
   filter: blur(0px);
 }
-#shope .shop_gallery .shop_item .sopimg img:nth-child(2) {
+#shope .shop_gallery .shop_item .sopimg a img:nth-child(2) {
   opacity: 0;
   visibility: hidden;
   transition: all linear 0.3s;
+  background-size: cover;
   margin-right: -100%;
-  transform: scaleX(2);
+  transform: scaleX(3);
   filter: blur(10px);
 }
-#shope .shop_gallery .shop_item .sopimg:hover img:nth-child(1) {
+#shope .shop_gallery .shop_item .sopimg a:hover img:nth-child(1) {
   opacity: 0;
   visibility: hidden;
   margin-left: -100%;
-  transform: scaleX(2);
+  transform: scaleX(3);
   filter: blur(10px);
 }
-#shope .shop_gallery .shop_item .sopimg:hover img:nth-child(2) {
+#shope .shop_gallery .shop_item .sopimg a:hover img:nth-child(2) {
   opacity: 1;
   visibility: visible;
   margin-right: 0%;
   transform: scaleX(1);
   filter: blur(0px);
+}
+#shope .shop_gallery .shop_item .sopimg:hover .dressTitle_layer {
+  bottom: 0;
+}
+#shope .shop_gallery .shop_item .sopimg .dressTitle_layer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #000;
+  position: absolute;
+  left: 0;
+  bottom: -20%;
+  right: 0;
+  transition: all linear 0.6s;
+}
+#shope .shop_gallery .shop_item .sopimg .dressTitle_layer span {
+  text-transform: capitalize;
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+  padding: 15px 30px;
+}
+#shope .shop_gallery .shop_item .sopimg .dressTitle_layer span a {
+  color: #fff;
+  position: relative;
+}
+#shope .shop_gallery .shop_item .sopimg .dressTitle_layer span a::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -20px;
+  content: "+";
+  font-size: 20px;
+  font-family: fontawesome 6.4 0 free;
+}
+#shope .shop_gallery .shop_item .sopimg .dressTitle_layer i {
+  font-size: 40px;
+  color: #FF9776;
+  padding: 15px 10px;
+  border: 1px solid #000;
+  background: #fff;
 }
 #shope .shop_gallery .shop_item .spptxt {
   padding: 10px;

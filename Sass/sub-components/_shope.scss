@@ -67,36 +67,85 @@
             overflow: hidden;
             margin-top: 24px;
             .sopimg{
-                display: flex;
-                img:nth-child(1){
-                    opacity: 1;
-                    visibility: visible;
-                    transition: all linear .3s;
-                    filter: blur(0px);
-                }
-                img:nth-child(2){
-                    opacity: 0;
-                    visibility: hidden;
-                    transition: all linear .3s;
-                    margin-right: -100%;
-                    transform: scaleX(2);
-                    filter: blur(10px);
-
-                }
-                &:hover{
+                position: relative;
+                overflow: hidden;
+                a{
+                    display: flex;
                     img:nth-child(1){
-                        opacity: 0;
-                        visibility: hidden;
-                        margin-left: -100%;
-                        transform: scaleX(2);
-                        filter: blur(10px);
-                    }
-                    img:nth-child(2){
                         opacity: 1;
                         visibility: visible;
-                        margin-right: 0%;
-                        transform: scaleX(1);
+                        transition: all linear .3s;
+                        background-size: cover;
                         filter: blur(0px);
+                    }
+                    img:nth-child(2){
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all linear .3s;
+                        background-size: cover;
+                        margin-right: -100%;
+                        transform: scaleX(3);
+                        filter: blur(10px);
+    
+                    }
+                    &:hover{
+                        img:nth-child(1){
+                            opacity: 0;
+                            visibility: hidden;
+                            margin-left: -100%;
+                            transform: scaleX(3);
+                            filter: blur(10px);
+                        }
+                        img:nth-child(2){
+                            opacity: 1;
+                            visibility: visible;
+                            margin-right: 0%;
+                            transform: scaleX(1);
+                            filter: blur(0px);
+                        }
+                    }
+                }
+                &:hover{
+                    .dressTitle_layer{
+                        bottom: 0;
+                    }
+                }
+                .dressTitle_layer{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    background: $dark000;
+                    position: absolute;
+                    left: 0;
+                    bottom: -20%;
+                    right: 0;
+                    transition: all linear .6s;
+                    span{
+                        text-transform: capitalize;
+                        font-size: 22px;
+                        font-weight: 500;
+                        color:$white;
+                        padding: 15px 30px;
+                        a{
+                            color:$white;
+                            position: relative;
+                            &::before{
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                left: -20px;
+                                content: "\2b";
+                                font-size: 20px;
+                                font-family: fontawesome 6.4.0 free;
+                            }
+                        }
+                    }
+                    i{
+                        font-size: 40px;
+                        color:$pink;
+                        padding: 15px 10px;
+                        border: 1px solid $dark000;
+                        background: $white;
                     }
                 }
             }
