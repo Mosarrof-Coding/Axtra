@@ -344,6 +344,7 @@
   top: 15%;
   width: 12%;
   animation: xpand 2s linear alternate infinite;
+  animation-delay: 0ms;
 }
 #banner .banIMG .envatoImg img {
   width: 100%;
@@ -930,7 +931,7 @@
   left: -20px;
   content: "+";
   font-size: 20px;
-  font-family: fontawesome 6.4 0 free;
+  font-family: font awesome 6 free;
 }
 #shope .shop_gallery .shop_item .sopimg .dressTitle_layer i {
   font-size: 40px;
